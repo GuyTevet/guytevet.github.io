@@ -64,13 +64,16 @@
 }
 
 a {
-  color: #1772d0;
+  color:#0d5093;
   text-decoration: none;
 }
 
+
+
+
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #1772d0;
   text-decoration: none;
 }
 
@@ -93,21 +96,23 @@ h2 {
   margin: 0;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 28px;
 }
+
+
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .name {
-  padding-top: 20px;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 40px;
 }
+
 
 .one {
   width: 100%;
@@ -133,3 +138,4 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
