@@ -19,7 +19,7 @@ const PAPERS =
         {
           "title": "HOIDiNi: Human-Object Interaction through Diffusion Noise Optimization",
           "authors": "Roey Ron, <strong>Guy Tevet</strong>, Haim Sawdayee, Amit H. Bermano",
-          "venue": "preprint",
+          "venue": "CVPR Workshop 2026",
           "image": "img/hoidini.jpg",
           "links": {
             "project page": "https://hoidini.github.io/",
@@ -30,7 +30,7 @@ const PAPERS =
         {
           "title": "Dance Like a Chicken: Low-Rank Stylization for Human Motion Diffusion",
           "authors": "Haim Sawdayee, Chuan Guo, <strong>Guy Tevet</strong>, Bing Zhou, Jian Wang, Amit H. Bermano",
-          "venue": "preprint",
+          "venue": "EuroGraphics 2026",
           "image": "img/mdm_lora.jpg",
           "links": {
             "project page": "https://haimsaw.github.io/LoRA-MDM/",
