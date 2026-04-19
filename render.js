@@ -6,14 +6,53 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderPapers(data) {
   const root = document.getElementById('papers');
   if (!root) return;
-  for (const topic of data.topics) {
-    const section = document.createElement('section');
-    section.id = `topic-${topic.id}`;
-    section.className = 'topic';
-    section.insertAdjacentHTML('beforeend', `<h2>${escapeText(topic.title)}</h2>`);
-    for (const p of topic.papers) section.insertAdjacentHTML('beforeend', paperHTML(p));
-    root.appendChild(section);
+
+  const topics = data.topics;
+  const allPapers = topics.flatMap(t => t.papers.map(p => ({ ...p, topicId: t.id })));
+  const selectedPapers = allPapers.filter(p => p.selected);
+
+  const modes = [
+    { id: 'selected', label: 'Selected', list: selectedPapers },
+    ...topics.map(t => ({
+      id: t.id,
+      label: t.label || t.title,
+      list: allPapers.filter(p => p.topicId === t.id),
+    })),
+    { id: 'all', label: 'All', list: allPapers },
+  ];
+
+  root.insertAdjacentHTML('beforeend', '<h2>Publications</h2>');
+
+  const filterRow = document.createElement('div');
+  filterRow.className = 'paper-filter';
+  modes.forEach((m, i) => {
+    if (i > 0) filterRow.insertAdjacentHTML('beforeend', '<span class="sep">·</span>');
+    const a = document.createElement('a');
+    a.textContent = m.label;
+    a.dataset.mode = m.id;
+    a.href = '#' + m.id;
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      selectMode(m.id);
+    });
+    filterRow.appendChild(a);
+  });
+  root.appendChild(filterRow);
+
+  const listDiv = document.createElement('div');
+  listDiv.id = 'paper-list';
+  root.appendChild(listDiv);
+
+  function selectMode(id) {
+    const mode = modes.find(m => m.id === id);
+    if (!mode) return;
+    filterRow.querySelectorAll('a').forEach(a => {
+      a.classList.toggle('active', a.dataset.mode === id);
+    });
+    listDiv.innerHTML = mode.list.map(paperHTML).join('');
   }
+
+  selectMode('selected');
 }
 
 function paperHTML(p) {

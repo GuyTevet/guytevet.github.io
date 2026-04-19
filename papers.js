@@ -4,6 +4,7 @@ const PAPERS =
     {
       "id": "motion",
       "title": "Animation and Motion Synthesis",
+      "label": "Character Animation",
       "papers": [
         {
           "title": "Generating Detailed Character Motion from Blocking Poses",
@@ -63,6 +64,7 @@ const PAPERS =
           "title": "CLoSD: Closing the Loop between Simulation and Diffusion for multi-task character control",
           "authors": "<strong>Guy Tevet</strong>, Sigal Raab, Setareh Cohan, Daniele Reda, Zhengyi Luo, Xue Bin Peng, Amit H. Bermano, Michiel van de Panne",
           "venue": "ICLR 2025 (Spotlight)",
+          "selected": true,
           "image": "img/closd.jpg",
           "links": {
             "project page": "https://guytevet.github.io/CLoSD-page/",
@@ -131,6 +133,7 @@ const PAPERS =
           "authors": "<strong>Guy Tevet</strong>, Sigal Raab, Brian Gordon, Yonatan Shafir, Daniel Cohen-Or, Amit H. Bermano",
           "venue": "ICLR 2023",
           "venue_note": "(Top-25%)",
+          "selected": true,
           "image": "img/mdm.png",
           "links": {
             "project page": "https://guytevet.github.io/mdm-page/",
@@ -143,6 +146,7 @@ const PAPERS =
           "title": "MotionCLIP: Exposing Human Motion Generation to CLIP Space",
           "authors": "<strong>Guy Tevet*</strong>, Brian Gordon*, Amir Hertz, Amit H. Bermano, Daniel Cohen-Or",
           "venue": "ECCV 2022",
+          "selected": true,
           "image": "img/motion_clip.png",
           "links": {
             "project page": "https://guytevet.github.io/motionclip-page/",
@@ -155,6 +159,7 @@ const PAPERS =
     {
       "id": "nlg",
       "title": "Natural Language Generation",
+      "label": "Language",
       "papers": [
         {
           "title": "Evaluating the Evaluation of Diversity in Natural Language Generation",
@@ -181,6 +186,7 @@ const PAPERS =
     {
       "id": "design",
       "title": "Generative Design",
+      "label": "Design",
       "papers": [
         {
           "title": "Generative Design of Sheet Metal Structures",

@@ -210,6 +210,33 @@ p.start {
   }
 }
 
+/* Publications filter chips */
+.paper-filter {
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.paper-filter a {
+  color: #888;
+  text-decoration: none;
+}
+
+.paper-filter a:hover {
+  color: #444;
+  text-decoration: none;
+}
+
+.paper-filter a.active {
+  color: #111;
+  font-weight: 600;
+}
+
+.paper-filter .sep {
+  color: #d0d0d0;
+  margin: 0 10px;
+  user-select: none;
+}
+
 /* News list */
 #news {
   font-size: 15px;
