@@ -110,6 +110,7 @@ const PAPERS =
           "title": "Human Motion Diffusion as a Generative Prior",
           "authors": "Yonatan Shafir*, <strong>Guy Tevet*</strong>, Roy Kapon, Amit H. Bermano",
           "venue": "ICLR 2024",
+          "selected": true,
           "image": "img/prior_mdm.png",
           "links": {
             "project page": "https://priormdm.github.io/priorMDM-page/",
@@ -186,7 +187,7 @@ const PAPERS =
     {
       "id": "design",
       "title": "Generative Design",
-      "label": "Design",
+      "label": "3D Design",
       "papers": [
         {
           "title": "Generative Design of Sheet Metal Structures",
