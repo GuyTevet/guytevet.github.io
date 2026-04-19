@@ -28,7 +28,7 @@ function renderPapers(data) {
   const filterRow = document.createElement('div');
   filterRow.className = 'paper-filter';
   modes.forEach((m, i) => {
-    if (i > 0) filterRow.insertAdjacentHTML('beforeend', '<span class="sep">·</span>');
+    if (i > 0) filterRow.insertAdjacentHTML('beforeend', ' <span class="sep">·</span> ');
     const a = document.createElement('a');
     a.textContent = m.label;
     a.dataset.mode = m.id;
