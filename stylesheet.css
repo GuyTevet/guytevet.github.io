@@ -286,6 +286,7 @@ p.start {
 .paper-filter a {
   color: #888;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .paper-filter a:hover {

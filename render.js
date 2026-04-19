@@ -36,6 +36,7 @@ function renderPapers(data) {
     a.addEventListener('click', e => {
       e.preventDefault();
       selectMode(m.id);
+      scrollToSticky();
     });
     filterRow.appendChild(a);
   });
@@ -61,7 +62,13 @@ function renderPapers(data) {
 
   selectMode('selected');
   window.addEventListener('resize', equalizeCardHeights);
-  setupStickyFilter(stickyWrap);
+  const stickyPlaceholder = setupStickyFilter(stickyWrap);
+
+  function scrollToSticky() {
+    const flowEl = stickyWrap.classList.contains('stuck') ? stickyPlaceholder : stickyWrap;
+    const y = flowEl.getBoundingClientRect().top + window.scrollY;
+    if (window.scrollY > y) window.scrollTo({ top: y, behavior: 'smooth' });
+  }
 }
 
 function setupStickyFilter(el) {
@@ -99,6 +106,7 @@ function setupStickyFilter(el) {
     update();
   });
   update();
+  return placeholder;
 }
 
 function equalizeCardHeights() {
