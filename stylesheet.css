@@ -67,6 +67,11 @@ body {
   background-color: #fafafa;
 }
 
+/* Ensure layout widths include padding — prevents mobile overflow from the td padding:2.5% + width:100% combo */
+table, td, tr, tbody {
+  box-sizing: border-box;
+}
+
 /* Links */
 a {
   color: #1e40af;

@@ -96,8 +96,16 @@ function setupStickyFilter(el) {
       placeholder.style.display = 'none';
       el.style.left = '';
       el.style.width = '';
+      el.style.top = '';
       el.classList.remove('stuck');
       stuck = false;
+    }
+    if (stuck) {
+      const paperList = document.getElementById('paper-list');
+      const listBottom = paperList ? paperList.getBoundingClientRect().bottom : Infinity;
+      const stickyHeight = el.offsetHeight;
+      const offset = Math.min(0, listBottom - stickyHeight);
+      el.style.top = offset + 'px';
     }
   }
   window.addEventListener('scroll', update, { passive: true });
