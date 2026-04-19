@@ -50,9 +50,22 @@ function renderPapers(data) {
       a.classList.toggle('active', a.dataset.mode === id);
     });
     listDiv.innerHTML = mode.list.map(paperHTML).join('');
+    equalizeCardHeights();
+    listDiv.querySelectorAll('img').forEach(img => {
+      if (!img.complete) img.addEventListener('load', equalizeCardHeights, { once: true });
+    });
   }
 
   selectMode('selected');
+  window.addEventListener('resize', equalizeCardHeights);
+}
+
+function equalizeCardHeights() {
+  const cards = document.querySelectorAll('#paper-list .container');
+  if (!cards.length) return;
+  cards.forEach(c => c.style.minHeight = '');
+  const maxH = Math.max(...Array.from(cards, c => c.getBoundingClientRect().height));
+  cards.forEach(c => c.style.minHeight = maxH + 'px');
 }
 
 function paperHTML(p) {
@@ -61,7 +74,7 @@ function paperHTML(p) {
   const linksHTML = urls
     .map(([label, href]) => `<a href="${escapeAttr(href)}" target="_blank">${escapeText(label)}</a>`)
     .join(' / ');
-  const venueHTML = `<em>${escapeText(p.venue)}</em>${p.venue_note ? ' ' + escapeText(p.venue_note) : ''}`;
+  const venueHTML = `<span class="venue">${escapeText(p.venue)}${p.venue_note ? ' ' + escapeText(p.venue_note) : ''}</span>`;
   return `
     <div class="container">
       <img src="${escapeAttr(p.image)}" alt="${escapeAttr(p.title)}" class="image" loading="lazy">
