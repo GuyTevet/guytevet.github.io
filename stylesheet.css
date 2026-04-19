@@ -139,3 +139,93 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+/* Profile header layout */
+.container-title-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container-title {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.image-profile {
+  max-width: 100%;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .container-title-all {
+    flex-direction: row;
+  }
+
+  .container-title {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .image-profile {
+    height: 200px;
+    width: 200px;
+    margin: 0;
+  }
+}
+
+/* Paper row layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.text {
+  flex: 1;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  .image {
+    max-width: 50%;
+    margin: 0;
+  }
+
+  .text {
+    margin: 0;
+  }
+}
+
+/* Talks list */
+#talks {
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+#talks li {
+  margin-bottom: 8px;
+}
+
