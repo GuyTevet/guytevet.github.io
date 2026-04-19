@@ -6,6 +6,16 @@ const PAPERS =
       "title": "Animation and Motion Synthesis",
       "papers": [
         {
+          "title": "Generating Detailed Character Motion from Blocking Poses",
+          "authors": "Purvi Goel, <strong>Guy Tevet</strong>, C. Karen Liu, Kayvon Fatahalian",
+          "venue": "SIGGRAPH Asia 2025",
+          "image": "img/blocking_poses.jpg",
+          "links": {
+            "project page": "https://purvigoel.github.io/generative-motion-detailing/",
+            "arXiv": "https://arxiv.org/abs/2509.16064"
+          }
+        },
+        {
           "title": "Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark",
           "authors": "Yaron Aloni, Rotem Shalev-Arkushin, Yonatan Shafir, <strong>Guy Tevet</strong>, Ohad Fried, Amit H. Bermano",
           "venue": "ICCV Workshop 2025",
