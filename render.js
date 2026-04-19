@@ -21,7 +21,9 @@ function renderPapers(data) {
     { id: 'all', label: 'All', list: allPapers },
   ];
 
-  root.insertAdjacentHTML('beforeend', '<h2>Publications</h2>');
+  const stickyWrap = document.createElement('div');
+  stickyWrap.className = 'paper-sticky';
+  stickyWrap.insertAdjacentHTML('beforeend', '<h2>Publications</h2>');
 
   const filterRow = document.createElement('div');
   filterRow.className = 'paper-filter';
@@ -37,7 +39,8 @@ function renderPapers(data) {
     });
     filterRow.appendChild(a);
   });
-  root.appendChild(filterRow);
+  stickyWrap.appendChild(filterRow);
+  root.appendChild(stickyWrap);
 
   const listDiv = document.createElement('div');
   listDiv.id = 'paper-list';
@@ -58,6 +61,44 @@ function renderPapers(data) {
 
   selectMode('selected');
   window.addEventListener('resize', equalizeCardHeights);
+  setupStickyFilter(stickyWrap);
+}
+
+function setupStickyFilter(el) {
+  const placeholder = document.createElement('div');
+  placeholder.style.display = 'none';
+  el.parentNode.insertBefore(placeholder, el);
+  let stuck = false;
+  function applyGeometry() {
+    const parentRect = el.parentNode.getBoundingClientRect();
+    el.style.left = parentRect.left + 'px';
+    el.style.width = parentRect.width + 'px';
+  }
+  function update() {
+    const naturalTop = stuck
+      ? placeholder.getBoundingClientRect().top
+      : el.getBoundingClientRect().top;
+    const needStuck = naturalTop <= 0;
+    if (needStuck && !stuck) {
+      placeholder.style.height = el.offsetHeight + 'px';
+      placeholder.style.display = 'block';
+      applyGeometry();
+      el.classList.add('stuck');
+      stuck = true;
+    } else if (!needStuck && stuck) {
+      placeholder.style.display = 'none';
+      el.style.left = '';
+      el.style.width = '';
+      el.classList.remove('stuck');
+      stuck = false;
+    }
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', () => {
+    if (stuck) applyGeometry();
+    update();
+  });
+  update();
 }
 
 function equalizeCardHeights() {

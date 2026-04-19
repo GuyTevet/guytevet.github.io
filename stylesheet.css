@@ -259,9 +259,27 @@ p.start {
   }
 }
 
+/* Publications sticky wrapper (h2 + filter chips) */
+.paper-sticky {
+  background-color: #fafafa;
+}
+
+.paper-sticky.stuck {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding-top: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.paper-sticky.stuck h2 {
+  margin-top: 0;
+}
+
 /* Publications filter chips */
 .paper-filter {
-  margin-bottom: 16px;
+  padding: 12px 0;
+  margin-bottom: 4px;
   font-size: 15px;
 }
 
