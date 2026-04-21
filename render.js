@@ -47,6 +47,15 @@ function renderPapers(data) {
   listDiv.id = 'paper-list';
   root.appendChild(listDiv);
 
+  const measureDiv = document.createElement('div');
+  measureDiv.id = 'paper-measure';
+  measureDiv.setAttribute('aria-hidden', 'true');
+  measureDiv.innerHTML = allPapers.map(paperHTML).join('');
+  root.appendChild(measureDiv);
+  measureDiv.querySelectorAll('img').forEach(img => {
+    if (!img.complete) img.addEventListener('load', equalizeCardHeights, { once: true });
+  });
+
   function selectMode(id) {
     const mode = modes.find(m => m.id === id);
     if (!mode) return;
@@ -55,9 +64,6 @@ function renderPapers(data) {
     });
     listDiv.innerHTML = mode.list.map(paperHTML).join('');
     equalizeCardHeights();
-    listDiv.querySelectorAll('img').forEach(img => {
-      if (!img.complete) img.addEventListener('load', equalizeCardHeights, { once: true });
-    });
   }
 
   selectMode('selected');
@@ -118,11 +124,11 @@ function setupStickyFilter(el) {
 }
 
 function equalizeCardHeights() {
-  const cards = document.querySelectorAll('#paper-list .container');
-  if (!cards.length) return;
-  cards.forEach(c => c.style.minHeight = '');
-  const maxH = Math.max(...Array.from(cards, c => c.getBoundingClientRect().height));
-  cards.forEach(c => c.style.minHeight = maxH + 'px');
+  const measureCards = document.querySelectorAll('#paper-measure .container');
+  if (!measureCards.length) return;
+  const maxH = Math.max(...Array.from(measureCards, c => c.getBoundingClientRect().height));
+  const visibleCards = document.querySelectorAll('#paper-list .container');
+  visibleCards.forEach(c => c.style.minHeight = maxH + 'px');
 }
 
 function paperHTML(p) {
