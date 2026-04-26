@@ -233,6 +233,8 @@ p.start {
   left: 0;
   right: 0;
   top: 0;
+  height: 0;
+  overflow: hidden;
   visibility: hidden;
   pointer-events: none;
   display: flex;
