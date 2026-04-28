@@ -7,6 +7,19 @@ const PAPERS =
       "label": "Character Animation",
       "papers": [
         {
+          "title": "SMP: Reusable Score-Matching Motion Priors for Physics-Based Character Control",
+          "authors": "Yuxuan Mu*, Ziyu Zhang*, Yi Shi*, Dun Yang, Minami Matsumoto, Kotaro Imamura, <strong>Guy Tevet</strong>, Chuan Guo, Michael Taylor, Chang Shu, Pengcheng Xi, Xue Bin Peng",
+          "venue": "SIGGRAPH 2026",
+          "squeeze": true,
+          "image": "img/smp.jpg",
+          "links": {
+            "project page": "https://yxmu.foo/smp-page/",
+            "paper": "https://yxmu.foo/smp-page/assets/paper/SMP_paper.pdf",
+            "code": "https://github.com/xbpeng/MimicKit",
+            "video": "https://www.youtube.com/watch?v=jBA2tWk6vzU"
+          }
+        },
+        {
           "title": "Generating Detailed Character Motion from Blocking Poses",
           "authors": "Purvi Goel, <strong>Guy Tevet</strong>, C. Karen Liu, Kayvon Fatahalian",
           "venue": "SIGGRAPH Asia 2025",

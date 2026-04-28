@@ -138,13 +138,14 @@ function paperHTML(p) {
     .map(([label, href]) => `<a href="${escapeAttr(href)}" target="_blank">${escapeText(label)}</a>`)
     .join(' / ');
   const venueHTML = `<span class="venue">${escapeText(p.venue)}${p.venue_note ? ' ' + escapeText(p.venue_note) : ''}</span>`;
+  const containerClass = p.squeeze ? 'container squeezed' : 'container';
   return `
-    <div class="container">
+    <div class="${containerClass}">
       <img src="${escapeAttr(p.image)}" alt="${escapeAttr(p.title)}" class="image" loading="lazy">
       <p class="text">
         <a href="${escapeAttr(titleHref)}" target="_blank"><span class="papertitle">${escapeText(p.title)}</span></a>
         <br>
-        ${p.authors}
+        <span class="authors">${p.authors}</span>
         <br>
         ${venueHTML}
         <br>

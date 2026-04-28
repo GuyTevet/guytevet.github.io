@@ -131,6 +131,10 @@ h2 {
   font-weight: 700;
 }
 
+.container.squeezed .authors {
+  font-size: 13.5px;
+}
+
 .venue {
   font-style: italic;
   font-weight: 700;
