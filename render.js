@@ -93,6 +93,8 @@ function setupStickyFilter(el) {
       : el.getBoundingClientRect().top;
     const needStuck = naturalTop <= 0;
     if (needStuck && !stuck) {
+      const cs = getComputedStyle(el);
+      placeholder.style.marginTop = cs.marginTop;
       placeholder.style.height = el.offsetHeight + 'px';
       placeholder.style.display = 'block';
       applyGeometry();
@@ -100,6 +102,7 @@ function setupStickyFilter(el) {
       stuck = true;
     } else if (!needStuck && stuck) {
       placeholder.style.display = 'none';
+      placeholder.style.marginTop = '';
       el.style.left = '';
       el.style.width = '';
       el.style.top = '';

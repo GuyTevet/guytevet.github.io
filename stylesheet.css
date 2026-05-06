@@ -69,6 +69,11 @@ html, body {
 
 body {
   background-color: #fafafa;
+  /* Disable browser scroll anchoring: when .paper-sticky transitions from
+     in-flow to position:fixed, the layout change would otherwise cause
+     Chrome to auto-scroll ~160px (panel height) to "preserve" content
+     position, producing an abrupt jump at the moment of pinning. */
+  overflow-anchor: none;
 }
 
 /* Ensure layout widths include padding — prevents mobile overflow from the td padding:2.5% + width:100% combo */
@@ -298,18 +303,28 @@ p.start {
 /* Publications sticky wrapper (h2 + filter chips) */
 .paper-sticky {
   background-color: #fafafa;
+  /* Reserve the same padding + border in flow so that becoming stuck
+     doesn't change the wrapper's geometry. The h2's normal 48px top
+     margin is moved onto the wrapper (28px margin + 20px padding) so
+     the visible spacing above "Publications" is unchanged. */
+  margin-top: 28px;
+  padding-top: 20px;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paper-sticky h2 {
+  margin-top: 0;
 }
 
 .paper-sticky.stuck {
   position: fixed;
   top: 0;
   z-index: 10;
-  padding-top: 20px;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.paper-sticky.stuck h2 {
   margin-top: 0;
+  border-bottom-color: #e5e7eb;
+  box-shadow: 0 6px 12px -8px rgba(0, 0, 0, 0.18);
 }
 
 /* Publications filter chips */
