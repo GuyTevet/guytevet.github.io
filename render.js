@@ -82,10 +82,13 @@ function setupStickyFilter(el) {
   placeholder.style.display = 'none';
   el.parentNode.insertBefore(placeholder, el);
   let stuck = false;
+  const SHADOW_PAD = 20;
   function applyGeometry() {
     const parentRect = el.parentNode.getBoundingClientRect();
-    el.style.left = parentRect.left + 'px';
+    el.style.left = (parentRect.left - SHADOW_PAD) + 'px';
     el.style.width = parentRect.width + 'px';
+    el.style.paddingLeft = SHADOW_PAD + 'px';
+    el.style.paddingRight = SHADOW_PAD + 'px';
   }
   function update() {
     const naturalTop = stuck
@@ -106,6 +109,8 @@ function setupStickyFilter(el) {
       el.style.left = '';
       el.style.width = '';
       el.style.top = '';
+      el.style.paddingLeft = '';
+      el.style.paddingRight = '';
       el.classList.remove('stuck');
       stuck = false;
     }
