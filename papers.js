@@ -137,7 +137,7 @@ const PAPERS =
           "authors": "Yonatan Shafir*, <strong>Guy Tevet*</strong>, Roy Kapon, Amit H. Bermano",
           "venue": "ICLR 2024",
           "selected": true,
-          "image": "img/prior_mdm.png",
+          "image": "img/prior_mdm.jpg",
           "links": {
             "project page": "https://priormdm.github.io/priorMDM-page/",
             "arXiv": "https://arxiv.org/abs/2303.01418",
@@ -148,7 +148,7 @@ const PAPERS =
           "title": "Single Motion Diffusion",
           "authors": "Sigal Raab*, Inbal Leibovitch*, <strong>Guy Tevet</strong>, Moab Arar, Amit H. Bermano, Daniel Cohen-Or",
           "venue": "ICLR2024 (Spotlight)",
-          "image": "img/sin_mdm.png",
+          "image": "img/sin_mdm.jpg",
           "links": {
             "project page": "https://sinmdm.github.io/SinMDM-page/",
             "arXiv": "https://arxiv.org/abs/2302.05905",
@@ -174,7 +174,7 @@ const PAPERS =
           "authors": "<strong>Guy Tevet*</strong>, Brian Gordon*, Amir Hertz, Amit H. Bermano, Daniel Cohen-Or",
           "venue": "ECCV 2022",
           "selected": true,
-          "image": "img/motion_clip.png",
+          "image": "img/motion_clip.jpg",
           "links": {
             "project page": "https://guytevet.github.io/motionclip-page/",
             "arXiv": "https://arxiv.org/abs/2203.08063",
@@ -219,7 +219,7 @@ const PAPERS =
           "title": "Generative Design of Sheet Metal Structures",
           "authors": "Amir Barda, <strong>Guy Tevet</strong>, Adriana Schulz, Amit H. Bermano",
           "venue": "SIGGRAPH 2023",
-          "image": "img/sheet_metal.png",
+          "image": "img/sheet_metal.jpg",
           "links": {
             "paper": "https://homes.cs.washington.edu/~adriana/website/sheetMetal.pdf"
           }
