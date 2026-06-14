@@ -7,19 +7,6 @@ const PAPERS =
       "label": "Character Animation",
       "papers": [
         {
-          "title": "RoMo: A Large-Scale, Richly Organized Dataset and Semantic Taxonomy for Human Motion Generation",
-          "authors": "Jiahao Zhang, Joseph Liu, Young-Yoon Lee, Seonghyeon Moon, Victor Zordan, <strong>Guy Tevet</strong>, Karen Liu, Stephen Gould, Oren Jacob, Haomiao Jiang, Mubbasir Kapadia, Yizhak Ben-Shabat",
-          "venue": "CVPR 2026",
-          "image": "img/romo.jpg",
-          "links": {
-            "project page": "https://davidzhang73.github.io/romo-website/",
-            "arXiv": "https://arxiv.org/abs/2605.26241",
-            "code": "https://github.com/RoMoDataset/motion-toolbox",
-            "data": "https://huggingface.co/datasets/RoMoDataset/RoMo-SMPL",
-            "video": "https://www.youtube.com/watch?v=mVibnhb-KcU"
-          }
-        },
-        {
           "title": "SMP: Reusable Score-Matching Motion Priors for Physics-Based Character Control",
           "authors": "Yuxuan Mu*, Ziyu Zhang*, Yi Shi*, Dun Yang, Minami Matsumoto, Kotaro Imamura, <strong>Guy Tevet</strong>, Chuan Guo, Michael Taylor, Chang Shu, Pengcheng Xi, Xue Bin Peng",
           "venue": "SIGGRAPH 2026",
@@ -33,24 +20,16 @@ const PAPERS =
           }
         },
         {
-          "title": "Generating Detailed Character Motion from Blocking Poses",
-          "authors": "Purvi Goel, <strong>Guy Tevet</strong>, C. Karen Liu, Kayvon Fatahalian",
-          "venue": "SIGGRAPH Asia 2025",
-          "image": "img/blocking_poses.jpg",
+          "title": "RoMo: A Large-Scale, Richly Organized Dataset and Semantic Taxonomy for Human Motion Generation",
+          "authors": "Jiahao Zhang, Joseph Liu, Young-Yoon Lee, Seonghyeon Moon, Victor Zordan, <strong>Guy Tevet</strong>, Karen Liu, Stephen Gould, Oren Jacob, Haomiao Jiang, Mubbasir Kapadia, Yizhak Ben-Shabat",
+          "venue": "CVPR 2026",
+          "image": "img/romo.jpg",
           "links": {
-            "project page": "https://purvigoel.github.io/generative-motion-detailing/",
-            "arXiv": "https://arxiv.org/abs/2509.16064"
-          }
-        },
-        {
-          "title": "Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark",
-          "authors": "Yaron Aloni, Rotem Shalev-Arkushin, Yonatan Shafir, <strong>Guy Tevet</strong>, Ohad Fried, Amit H. Bermano",
-          "venue": "ICCV Workshop 2025",
-          "image": "img/express4d.jpg",
-          "links": {
-            "project page": "https://jaron1990.github.io/Express4D/",
-            "arXiv": "https://jaron1990.github.io/Express4D/",
-            "code": "https://github.com/jaron1990/Express4D/"
+            "project page": "https://davidzhang73.github.io/romo-website/",
+            "arXiv": "https://arxiv.org/abs/2605.26241",
+            "code": "https://github.com/RoMoDataset/motion-toolbox",
+            "data": "https://huggingface.co/datasets/RoMoDataset/RoMo-SMPL",
+            "video": "https://www.youtube.com/watch?v=mVibnhb-KcU"
           }
         },
         {
@@ -73,6 +52,27 @@ const PAPERS =
             "project page": "https://haimsaw.github.io/LoRA-MDM/",
             "arXiv": "https://arxiv.org/abs/2503.19557",
             "code": "https://github.com/haimsaw/LoRA-MDM"
+          }
+        },
+        {
+          "title": "Generating Detailed Character Motion from Blocking Poses",
+          "authors": "Purvi Goel, <strong>Guy Tevet</strong>, C. Karen Liu, Kayvon Fatahalian",
+          "venue": "SIGGRAPH Asia 2025",
+          "image": "img/blocking_poses.jpg",
+          "links": {
+            "project page": "https://purvigoel.github.io/generative-motion-detailing/",
+            "arXiv": "https://arxiv.org/abs/2509.16064"
+          }
+        },
+        {
+          "title": "Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark",
+          "authors": "Yaron Aloni, Rotem Shalev-Arkushin, Yonatan Shafir, <strong>Guy Tevet</strong>, Ohad Fried, Amit H. Bermano",
+          "venue": "ICCV Workshop 2025",
+          "image": "img/express4d.jpg",
+          "links": {
+            "project page": "https://jaron1990.github.io/Express4D/",
+            "arXiv": "https://jaron1990.github.io/Express4D/",
+            "code": "https://github.com/jaron1990/Express4D/"
           }
         },
         {
