@@ -22,6 +22,22 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
+  <!-- AnimoFlow launch card -->
+  <style>
+    /* Reuses the page's .container / .papertitle / .venue vocabulary,
+       with the teaser as a restrained banner across the top. */
+    .af-card .papertitle { font-size: 22px; display: inline-block; line-height: 1.1; }
+    .af-tldr { display: inline-block; margin-top: 8px; }
+    /* full-bleed teaser: cancel the card's 20px padding so the image
+       reaches the card edges, with the top corners clipped to the radius */
+    .af-card.af-banner { flex-direction: column; align-items: stretch; overflow: hidden; }
+    .af-card.af-banner .image { width: calc(100% + 40px); max-width: none; height: 150px;
+      object-fit: cover; object-position: center 40%; margin: -20px -20px 4px; }
+    @media (min-width: 768px) { .af-card.af-banner .image { max-width: none; } }
+    /* Section divider between News and the launch card */
+    .af-divider { border: 0; border-top: 1px solid #e5e5e5; margin: 48px 0 20px; }
+  </style>
+
 </head>
 
 <body>
@@ -117,6 +133,9 @@
           <h2>News</h2>
           <ul id="news">
             <li>
+              [Jul 2026] Excited to launch <a href="https://animoflow.ai" target="_blank">animoflow.ai</a>, an open ecosystem for generative character animation.
+            </li>
+            <li>
               [May 2026] Honored to receive the <a href="https://www.siggraph.org/awards/outstanding-doctoral-dissertation-award/" target="_blank">SIGGRAPH Outstanding Doctoral Dissertation Award</a>.
             </li>
             <li>
@@ -126,6 +145,30 @@
               [Apr 2026] I'm co-organizing <a href="https://humogen.github.io/" target="_blank">The Third Workshop on Human Motion Generation (HuMoGen)</a> at CVPR 2026.
             </li>
           </ul>
+
+          <!-- ============================================================
+               AnimoFlow launch card — 3 options to choose from.
+               All reuse the page's .container / .papertitle / .venue / link
+               vocabulary so they sit in the same family as the paper cards.
+               Pick one; the others + the .af-optlabel notes get removed.
+               ============================================================ -->
+
+          <hr class="af-divider">
+          <div class="container af-card af-banner">
+            <img src="img/animoflow.jpg" alt="AnimoFlow" class="image">
+            <p class="text">
+              <a href="https://animoflow.ai" target="_blank"><span class="papertitle">AnimoFlow</span></a>
+              <br>
+              <span class="af-tldr">AnimoFlow is an open platform that turns state-of-the-art character-animation
+              models into rigged, animator-ready assets, delivered inside the tools animators already use. Today's
+              leading models are integrated, and new ones plug in by design.</span>
+              <br>
+              <a href="https://animoflow.ai" target="_blank">Website</a> /
+              <a href="https://github.com/AnimoFlow" target="_blank">Code</a> /
+              <a href="https://x.com/GuyTvt/status/2074916693013651771?s=20" target="_blank">Tweet</a> /
+              arXiv (soon)
+            </p>
+          </div>
 
           <!-- Papers (rendered by render.js from papers.json) -->
           <div id="papers"></div>
