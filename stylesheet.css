@@ -356,6 +356,18 @@ p.start {
   user-select: none;
 }
 
+/* Narrow screens: the chip row wraps, so tighten spacing and give the
+   wrapped lines a little breathing room. */
+@media (max-width: 767px) {
+  .paper-filter {
+    line-height: 1.9;
+  }
+
+  .paper-filter .sep {
+    margin: 0 6px;
+  }
+}
+
 /* News list */
 #news {
   font-size: 15px;

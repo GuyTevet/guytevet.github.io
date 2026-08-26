@@ -132,10 +132,15 @@ function setupStickyFilter(el) {
 }
 
 function equalizeCardHeights() {
+  const visibleCards = document.querySelectorAll('#paper-list .container');
+  // Cards stack vertically below 768px, so a shared height only adds dead space.
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    visibleCards.forEach(c => c.style.minHeight = '');
+    return;
+  }
   const measureCards = document.querySelectorAll('#paper-measure .container');
   if (!measureCards.length) return;
   const maxH = Math.max(...Array.from(measureCards, c => c.getBoundingClientRect().height));
-  const visibleCards = document.querySelectorAll('#paper-list .container');
   visibleCards.forEach(c => c.style.minHeight = maxH + 'px');
 }
 

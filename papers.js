@@ -2,6 +2,37 @@ const PAPERS =
 {
   "topics": [
     {
+      "id": "robotics",
+      "title": "Robotics",
+      "label": "Robotics",
+      "papers": [
+        {
+          "title": "Cloak: Zero-Shot Cross-Embodiment Manipulation by Masking the End-Effector from the VLA",
+          "authors": "Michael Piseno*, <strong>Guy Tevet*</strong>, C. Karen Liu",
+          "venue": "arXiv 2026",
+          "selected": true,
+          "image": "img/cloak.jpg",
+          "links": {
+            "project page": "https://tml.stanford.edu/cloak/",
+            "arXiv": "https://arxiv.org/abs/2606.22836",
+            "code": "https://github.com/Stanford-TML/cloak"
+          }
+        },
+        {
+          "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
+          "authors": "Qiayuan Liao*, Takara E. Truong*, Xiaoyu Huang*, Yuman Gao, <strong>Guy Tevet</strong>, Koushil Sreenath, C. Karen Liu",
+          "venue": "Science Robotics, 2026",
+          "image": "img/beyondmimic.jpg",
+          "links": {
+            "project page": "https://beyondmimic.github.io/",
+            "arXiv": "https://arxiv.org/abs/2508.08241",
+            "code": "https://github.com/HybridRobotics/whole_body_tracking",
+            "video": "https://youtu.be/RS_MtKVIAzY"
+          }
+        }
+      ]
+    },
+    {
       "id": "motion",
       "title": "Animation and Motion Synthesis",
       "label": "Character Animation",
