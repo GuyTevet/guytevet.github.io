@@ -9,7 +9,7 @@ const PAPERS =
         {
           "title": "Cloak: Zero-Shot Cross-Embodiment Manipulation by Masking the End-Effector from the VLA",
           "authors": "Michael Piseno*, <strong>Guy Tevet*</strong>, C. Karen Liu",
-          "venue": "arXiv 2026",
+          "venue": "CoRL 2026",
           "selected": true,
           "image": "img/cloak.jpg",
           "links": {
@@ -21,7 +21,7 @@ const PAPERS =
         {
           "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
           "authors": "Qiayuan Liao*, Takara E. Truong*, Xiaoyu Huang*, Yuman Gao, <strong>Guy Tevet</strong>, Koushil Sreenath, C. Karen Liu",
-          "venue": "Science Robotics, 2026",
+          "venue": "Science Robotics 2026",
           "image": "img/beyondmimic.jpg",
           "links": {
             "project page": "https://beyondmimic.github.io/",
