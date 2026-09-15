@@ -38,6 +38,18 @@ const PAPERS =
       "label": "Character Animation",
       "papers": [
         {
+          "title": "Bolt: Learning Realistic Athletic Sprinting Without Demonstrations",
+          "authors": "William Wang, Nicholas Bianco, <strong>Guy Tevet</strong>, Jennifer Hicks, C. Karen Liu, Scott Delp, Kayvon Fatahalian",
+          "venue": "SIGGRAPH Asia 2026",
+          "image": "img/bolt.png",
+          "links": {
+            "project page": "https://bolt-simulator.github.io/",
+            "arXiv": "https://arxiv.org/abs/2609.11083",
+            "code": "https://github.com/willwng/bolt",
+            "video": "https://youtu.be/vy2horWAkM4"
+          }
+        },
+        {
           "title": "SMP: Reusable Score-Matching Motion Priors for Physics-Based Character Control",
           "authors": "Yuxuan Mu*, Ziyu Zhang*, Yi Shi*, Dun Yang, Minami Matsumoto, Kotaro Imamura, <strong>Guy Tevet</strong>, Chuan Guo, Michael Taylor, Chang Shu, Pengcheng Xi, Xue Bin Peng",
           "venue": "SIGGRAPH 2026",
