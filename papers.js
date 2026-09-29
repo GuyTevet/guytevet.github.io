@@ -7,6 +7,17 @@ const PAPERS =
       "label": "Robotics",
       "papers": [
         {
+          "title": "HomeBody: A Humanoid That Explores, Remembers, and Acts on Its Own",
+          "authors": "Gio Huh, Cayden Gu, Takara E. Truong, C. Karen Liu*, <strong>Guy Tevet*</strong>",
+          "venue": "Preprint 2026",
+          "selected": true,
+          "image": "img/homebody.jpg",
+          "links": {
+            "project page": "https://tml.stanford.edu/homebody/",
+            "code": "https://github.com/Stanford-TML/homebody"
+          }
+        },
+        {
           "title": "Cloak: Zero-Shot Cross-Embodiment Manipulation by Masking the End-Effector from the VLA",
           "authors": "Michael Piseno*, <strong>Guy Tevet*</strong>, C. Karen Liu",
           "venue": "CoRL 2026",
