@@ -7,7 +7,19 @@ const PAPERS =
       "label": "Robotics",
       "papers": [
         {
-          "title": "HomeBody: A Humanoid That Explores, Remembers, and Acts on Its Own",
+          "title": "FoveaVLA: Foveation Actions Replace the Wrist Camera in VLAs",
+          "authors": "Bingao Chen, Lihan Zha, C. Karen Liu*, <strong>Guy Tevet*</strong>",
+          "venue": "Preprint 2026",
+          "selected": true,
+          "image": "img/foveavla.jpg",
+          "links": {
+            "project page": "https://tml.stanford.edu/FoveaVLA/",
+            "arXiv": "https://arxiv.org/abs/2610.20064",
+            "code": "https://github.com/Stanford-TML/FoveaVLA"
+          }
+        },
+        {
+          "title": "HomeBody:A Humanoid That Explores, Remembers, and Acts on Its Own",
           "authors": "Gio Huh, Cayden Gu, Takara E. Truong, C. Karen Liu*, <strong>Guy Tevet*</strong>",
           "venue": "Preprint 2026",
           "selected": true,
